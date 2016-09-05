@@ -16,9 +16,14 @@
 <h3 id="添加我的位置图层"><a href="#添加我的位置图层" class="headerlink" title="添加我的位置图层"></a>添加我的位置图层</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.mLocationOverlay = <span class="keyword">new</span> MyLocationNewOverlay(context, <span class="keyword">new</span> GpsMyLocationProvider(context),mMapView);</div><div class="line"><span class="keyword">this</span>.mLocationOverlay.enableMyLocation();</div><div class="line">mMapView.getOverlays().add(<span class="keyword">this</span>.mLocationOverlay);</div></pre></td></tr></table></figure>
 <p>这样地图就会显示一个小黄人的图标在你的位置上了。而且还会随着你位置的改变而改变位置。</p>
 <h2 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h2><h3 id="离线地图的使用"><a href="#离线地图的使用" class="headerlink" title="离线地图的使用"></a>离线地图的使用</h3><ol>
-<li>使用<a href="http://mobac.sourceforge.net/" target="_blank" rel="external">MOBAC</a>地图下载工具下载离线地图</li>
+<li><p>使用<a href="http://mobac.sourceforge.net/" target="_blank" rel="external">MOBAC</a>地图下载工具下载离线地图,保存为zip格式</p>
+</li>
+<li><p>把下载好的地图放至手机储存的osmdroid目录下的tiles目录</p>
+</li>
+<li><p>代码设置地图为离线模式,并指定地图源的名字</p>
+</li>
 </ol>
-<p>2.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">map.setTileSource(<span class="keyword">new</span> XYTileSource(<span class="string">"YOUR MAP SOURCE"</span>, <span class="number">0</span>, <span class="number">18</span>, <span class="number">256</span>, <span class="string">".jpg"</span>, <span class="keyword">new</span> String[] &#123;&#125;));</div><div class="line">    <span class="comment">//....</span></div><div class="line">map.setUseDataConnection(<span class="keyword">false</span>); <span class="comment">//optional, but a good way to prevent loading from the network and test your zip loading.</span></div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
