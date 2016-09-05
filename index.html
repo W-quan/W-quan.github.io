@@ -296,6 +296,119 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/05/use-osmdroid/" itemprop="url">
+                  osmdroid的使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-05T16:46:40+08:00" content="2016-09-05">
+              2016-09-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/05/use-osmdroid/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/05/use-osmdroid/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="osmdroid的使用"><a href="#osmdroid的使用" class="headerlink" title="osmdroid的使用"></a>osmdroid的使用</h1><p><a href="https://github.com/osmdroid/osmdroid" target="_blank" rel="external">osmdroid</a>是一个用与替代Android原生MapView的开源地图组件。 它支持多种在线/离线地图，如 OpenStreetMap等。详情见<a href="https://github.com/osmdroid/osmdroid/wiki" target="_blank" rel="external">osmdroid wiki</a>。</p>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><h3 id="Gradle-导入"><a href="#Gradle-导入" class="headerlink" title="Gradle 导入"></a>Gradle 导入</h3><p>添加下面的依赖到<code>build.gradle</code></p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">    compile <span class="string">'org.osmdroid:osmdroid-android:5.1@aar'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="AndroidMainFest-xml添加权限"><a href="#AndroidMainFest-xml添加权限" class="headerlink" title="AndroidMainFest.xml添加权限"></a>AndroidMainFest.xml添加权限</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_COARSE_LOCATION"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_FINE_LOCATION"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_WIFI_STATE"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_NETWORK_STATE"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.INTERNET"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="布局文件中添加MapView组件"><a href="#布局文件中添加MapView组件" class="headerlink" title="布局文件中添加MapView组件"></a>布局文件中添加MapView组件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">        <span class="attr">xmlns:tools</span>=<span class="string">"http://schemas.android.com/tools"</span></div><div class="line">        <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"fill_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"fill_parent"</span>&gt;</div><div class="line">        <span class="tag">&lt;<span class="name">org.osmdroid.views.MapView</span> <span class="attr">android:id</span>=<span class="string">"@+id/map"</span></span></div><div class="line">                <span class="attr">android:layout_width</span>=<span class="string">"fill_parent"</span></div><div class="line">                <span class="attr">android:layout_height</span>=<span class="string">"fill_parent"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="代码中引用"><a href="#代码中引用" class="headerlink" title="代码中引用"></a>代码中引用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.osmdroid.tileprovider.tilesource.TileSourceFactory;</div><div class="line"><span class="keyword">import</span> org.osmdroid.views.MapView;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        <span class="comment">//important! set your user agent to prevent getting banned from the osm servers  </span></div><div class="line">        org.osmdroid.tileprovider.constants.OpenStreetMapTileProviderConstants.setUserAgentValue(BuildConfig.APPLICATION_ID);</div><div class="line"></div><div class="line">        MapView map = (MapView) findViewById(R.id.map);</div><div class="line">        map.setTileSource(TileSourceFactory.MAPNIK);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>到这里，你的程序应该能看到一个地图了。这个地图有一个让人不爽的地方，就是如果地图缩放级别太小的话，你会看到许多重复的世界地图。我们可以通过现在它的最小缩放级别来解决：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">map.setMinZoomLevel(<span class="number">5</span>);</div></pre></td></tr></table></figure></p>
+<h3 id="添加我的位置图层"><a href="#添加我的位置图层" class="headerlink" title="添加我的位置图层"></a>添加我的位置图层</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.mLocationOverlay = <span class="keyword">new</span> MyLocationNewOverlay(context, <span class="keyword">new</span> GpsMyLocationProvider(context),mMapView);</div><div class="line"><span class="keyword">this</span>.mLocationOverlay.enableMyLocation();</div><div class="line">mMapView.getOverlays().add(<span class="keyword">this</span>.mLocationOverlay);</div></pre></td></tr></table></figure>
+<p>这样地图就会显示一个小黄人的图标在你的位置上了。而且还会随着你位置的改变而改变位置。</p>
+<h2 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h2><h3 id="离线地图的使用"><a href="#离线地图的使用" class="headerlink" title="离线地图的使用"></a>离线地图的使用</h3><ol>
+<li>使用<a href="http://mobac.sourceforge.net/" target="_blank" rel="external">MOBAC</a>地图下载工具下载离线地图</li>
+</ol>
+<p>2.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/04/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -420,7 +533,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -430,7 +543,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
