@@ -316,6 +316,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -357,14 +376,23 @@
 <h3 id="添加我的位置图层"><a href="#添加我的位置图层" class="headerlink" title="添加我的位置图层"></a>添加我的位置图层</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.mLocationOverlay = <span class="keyword">new</span> MyLocationNewOverlay(context, <span class="keyword">new</span> GpsMyLocationProvider(context),mMapView);</div><div class="line"><span class="keyword">this</span>.mLocationOverlay.enableMyLocation();</div><div class="line">mMapView.getOverlays().add(<span class="keyword">this</span>.mLocationOverlay);</div></pre></td></tr></table></figure>
 <p>这样地图就会显示一个小黄人的图标在你的位置上了。而且还会随着你位置的改变而改变位置。</p>
 <h2 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h2><h3 id="离线地图的使用"><a href="#离线地图的使用" class="headerlink" title="离线地图的使用"></a>离线地图的使用</h3><ol>
-<li><p>使用<a href="http://mobac.sourceforge.net/" target="_blank" rel="external">MOBAC</a>地图下载工具下载离线地图,保存为zip格式</p>
-</li>
+<li>使用<a href="http://mobac.sourceforge.net/" target="_blank" rel="external">MOBAC</a>地图下载工具下载离线地图,保存为zip格式</li>
+</ol>
+<p>MOBAC默认最大下载线程是6个。以及限制了最大下载瓦片数（图片）。可以下载其源码，找到相应的类，修改数值，然后单独编译那个类。替换MOBAC的jar包里的相应类即可。下载线程数增加可以提高下载速度，但是不要太大，不然程序会报内存溢出的错误。</p>
+<ol>
 <li><p>把下载好的地图放至手机储存的osmdroid目录下的tiles目录</p>
 </li>
 <li><p>代码设置地图为离线模式,并指定地图源的名字</p>
 </li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">map.setTileSource(<span class="keyword">new</span> XYTileSource(<span class="string">"YOUR MAP SOURCE"</span>, <span class="number">0</span>, <span class="number">18</span>, <span class="number">256</span>, <span class="string">".jpg"</span>, <span class="keyword">new</span> String[] &#123;&#125;));</div><div class="line">    <span class="comment">//....</span></div><div class="line">map.setUseDataConnection(<span class="keyword">false</span>); <span class="comment">//optional, but a good way to prevent loading from the network and test your zip loading.</span></div></pre></td></tr></table></figure>
+<h3 id="使用OSMBonusPack"><a href="#使用OSMBonusPack" class="headerlink" title="使用OSMBonusPack"></a>使用OSMBonusPack</h3><p><a href="https://github.com/MKergall/osmbonuspack" target="_blank" rel="external">OSMBonusPack</a>是osmdroid的第三方附加库。它为osmdroid添加了许多功能支持。</p>
+<h4 id="Marker"><a href="#Marker" class="headerlink" title="Marker"></a>Marker</h4><p>Marker可以在地图上添加一个标记点。使用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Marker startMarker = <span class="keyword">new</span> Marker(map);</div><div class="line">startMarker.setPosition(startPoint);</div><div class="line">startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);</div><div class="line">map.getOverlays().add(startMarker);</div></pre></td></tr></table></figure>
+<h4 id="Polyline"><a href="#Polyline" class="headerlink" title="Polyline"></a>Polyline</h4><p>Polyline可以在地图上显示线段，你需要提供一个点的数组。使用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ArrayList&lt;GeoPoint&gt; mPoints = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">mPoints.add(<span class="keyword">new</span> GeoPoint(lat, lng));</div><div class="line">...</div><div class="line">mPolyline.setPoints(mPoints);</div><div class="line">mMapView.getOverlays().add(mPolyline);	</div><div class="line">mMapView.invalidate();</div></pre></td></tr></table></figure>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p>OSMBonusPack还有很多功能，比如多边形、导航等。详情请看<a href="https://github.com/MKergall/osmbonuspack" target="_blank" rel="external">官网</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>osmdroid是一款很不错的开源地图工具，它的功能强大。此文只是简单介绍了它的使用，如果要深入了解，请访问其<a href="https://github.com/osmdroid/osmdroid" target="_blank" rel="external">github地址</a>。</p>
 
           
         
@@ -543,6 +571,13 @@
             </a>
           </div>
 
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           
