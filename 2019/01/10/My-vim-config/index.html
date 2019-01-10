@@ -10,7 +10,7 @@
     
     <title>
         
-            Android 使用无线连接 adb | 
+            我的 Vim 配置 | 
         
         W-quan&#39; Blog
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="W-quan">
     <meta name="description" content="Welcome to My Blog">
-    <meta name="keywords" content="null,android, adb">
+    <meta name="keywords" content="null,Vim">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://W-quan.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Android 使用无线连接 adb | W-quan&#39; Blog">
+    <meta property="og:title" content="我的 Vim 配置 | W-quan&#39; Blog">
     <meta property="og:description" content="Welcome to My Blog">
-    <meta property="og:article:tag" content="android, adb"> 
+    <meta property="og:article:tag" content="Vim"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -242,7 +242,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Android-使用无线连接-adb"><span class="post-toc-number">1.</span> <span class="post-toc-text">Android 使用无线连接 adb</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#插件管理器"><span class="post-toc-number">1.</span> <span class="post-toc-text">插件管理器</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#vimrc"><span class="post-toc-number">2.</span> <span class="post-toc-text">.vimrc</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -278,7 +278,7 @@
         
     
             <p class="article-headline-p">
-                Android 使用无线连接 adb
+                我的 Vim 配置
             </p>
         </div>
 
@@ -297,7 +297,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>W-quan</strong>
-        <span>3月 14, 2018</span>
+        <span>1月 10, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -318,7 +318,7 @@
         </button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
             <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACzUlEQVR42u3aS04kMRAFQO5/6ZntSKjhvcxi1NjhFULdZYeRyMrPx58r1wc2NjY2NjY2Njb2W7I/4vXv5z///PmZX+/y6lv5vvmZsbGxsW9gf/OvP6Amz/z66EUoGp0BGxsb+wZ2G7T2V5CEujaYYWNjY2NHj1inDa/w+W+wsbGxsTcBbF8e2jCwsbGxsR8o0LSl+QX+qRQIGxsb+2z2vtH7/39+i/42NjY29huwn11t+3ZWihqeDRsbG/tQ9j7NSJ6TJxtJW2I2BoSNjY19Kns2ZNMeNw9d+ybEy89jY2NjH83el2zyMNNex76whY2NjX02O08tXoWrWZDbnGFWhMLGxsY+lb0pMCXXsQlICSnZFxsbG/tsdv61NlFpR382YSwpaWFjY2Ofyp61eNtgVqcNcfvhgeFLbGxs7F/Onm2QIFvqJrBhY2Nj38yebZwkGO1lPdWceOnCxsbGvoC9H8qZjde0gbAdA8LGxsa+jd2+9G8u7tnmwTfXio2NjX0oO3/pb5sEs5U3JPIGAzY2NvYN7Fkb9dlW7mz3/NKxsbGxT2VvyklJkWiWfiR/krbMhI2NjX0qezOms/nMZpQzD3vY2NjYN7CTl/4W045aRolEHA6xsbGxb2O3W87at2360TYqomvCxsbGPpr9E6M2OaNt+g6fho2NjX0Be1bumZWW2iDXNgkeHtnBxsbGfnt2W6ZvwXmRKE9C8pNjY2Nj38bOX/dnZaM8/diUq7CxsbHvYbcrSV025aT2+vK2ATY2Nvap7E2Jpy0GtWWmJNAm14GNjY19A7sd2WlL+Xmzth3QycMkNjY29g3sJA1oiz77xGZTSMLGxsbGnrUQZkM/m0QlCcnY2NjY2LMW7370J0+TfjAVwcbGxv4l7DokxO3efSNhFvCwsbGx72G37dt84GZzZfloTnRB2NjY2Iey71nY2NjY2NjY2NjYb7P+AhoLFUcs2TXtAAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACW0lEQVR42u3aUbLCIAwFUPe/6fdWUL0JJWX09MtxqnD4IMwlr7+vfl54eHh4eHh4eHiH8V7xk//qcuC371RHuZwbHh4e3gjvw1Z7MfB7QAJO/q08Nzw8PLxB3tW0rj7nv7oqDPlYhVHw8PDwjuQlB+58i8fDw8P7BV4SNNy7KHh4eHhn8vKNO493q4Xh4awFDw8PL+bll0zzn0fv9/Dw8PACXrmlqRjX5gfr/MLswwzx8PDwNvPyjTgvJ9XlWJ8PHh4e3mm8vEjkUW8e45bjYDw8PLwR3koAkZeEpF0gv04rFAY8PDy8bbxk0tWjcLWo5AFHuTDg4eHh3cTLqb0wdyWAyENhPDw8vEle+WI+fqe3ZNXDOh4eHt4JvF78mjDycKEHw8PDw5vhVdut8iKRRxLJgjZjXDw8PLwNvN6xuFdUqt80Gw7w8PDwRnhJ/FoNWO9tUCjEx3h4eHgjvGTq+ZDJwlWX+LaeMjw8PLxl3kpDQC+86MGSizc8PDy8Gd7Khp7zVloN8lAYDw8Pb5430z7VazUozBkPDw/vIV6vQaoa7PZKUfNIjYeHh7eN19vuk/C3906yHHh4eHjP8vJ4d+XJS0s1nsDDw8PbzeuFs3m7wEoxaBYwPDw8vM283qacBxPVQLYXiODh4eHN86pNAPmkexdj1YKEh4eH9xQv2dZXGgXy5ev9Dx4eHt75vLuuu/IwImr5wsPDwzuY1zuIJ9FD/s72uoeHh4e3HEbcFVVUY+KhrAUPDw9vwwVY9fo/Lzb55dmHRcHDw8PbzPu+Bw8PDw8PDw8P74DnH3ZTPtq1bbDBAAAAAElFTkSuQmCC">
         </ul>
     
 
@@ -330,7 +330,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/android-adb/">android, adb</a>
+        <a class="post_tag-link" href="/tags/Vim/">Vim</a>
     </li></ul>
     
 
@@ -346,7 +346,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android 使用无线连接 adb&url=https://W-quan.github.io//2018/03/14/android-wifi-adb/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=我的 Vim 配置&url=https://W-quan.github.io//2019/01/10/My-vim-config/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -358,7 +358,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://W-quan.github.io//2018/03/14/android-wifi-adb/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://W-quan.github.io//2019/01/10/My-vim-config/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -367,7 +367,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://W-quan.github.io//2018/03/14/android-wifi-adb/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://W-quan.github.io//2019/01/10/My-vim-config/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -391,12 +391,8 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Android-使用无线连接-adb"><a href="#Android-使用无线连接-adb" class="headerlink" title="Android 使用无线连接 adb"></a>Android 使用无线连接 adb</h1><ol>
-<li>USB 连接手机</li>
-<li><code>adb tcpip 5555</code></li>
-<li><code>adb connect {ip}</code></li>
-<li><strong>done</strong></li>
-</ol>
+        <h1 id="插件管理器"><a href="#插件管理器" class="headerlink" title="插件管理器"></a>插件管理器</h1><p><a href="https://github.com/junegunn/vim-plug" target="_blank" rel="noopener">vim-plug</a></p>
+<h1 id="vimrc"><a href="#vimrc" class="headerlink" title=".vimrc"></a><code>.vimrc</code></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> number</span><br><span class="line"><span class="built_in">set</span> mouse=a</span><br><span class="line">syntax on</span><br><span class="line">filetype on</span><br><span class="line"><span class="built_in">set</span> ruler</span><br><span class="line">colorscheme koehler</span><br><span class="line"><span class="built_in">set</span> guifont=Monaco:h14</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> tabstop=4</span><br><span class="line"><span class="built_in">set</span> shiftwidth=4</span><br><span class="line"><span class="built_in">set</span> expandtab</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> clipboard=unnamed</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> ignorecase</span><br><span class="line"><span class="built_in">set</span> hlsearch</span><br><span class="line"></span><br><span class="line">map &lt;C-n&gt; :nohl&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">nnoremap &lt;Space&gt; &lt;C<span class="_">-d</span>&gt;</span><br><span class="line"></span><br><span class="line">map q :q&lt;CR&gt;</span><br><span class="line">map ; :</span><br><span class="line"></span><br><span class="line"><span class="string">" Install Plugins Start</span></span><br><span class="line"><span class="string">call plug#begin()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Plug 'scrooloose/nerdtree', &#123; 'on':  'NERDTreeToggle' &#125;</span></span><br><span class="line"><span class="string">Plug 'majutsushi/tagbar'</span></span><br><span class="line"><span class="string">Plug 'plasticboy/vim-markdown'</span></span><br><span class="line"><span class="string">Plug 'suan/vim-instant-markdown'</span></span><br><span class="line"><span class="string">Plug 'tpope/vim-fugitive'</span></span><br><span class="line"><span class="string">Plug 'airblade/vim-gitgutter'</span></span><br><span class="line"><span class="string">Plug 'junegunn/gv.vim'</span></span><br><span class="line"><span class="string">Plug 'sodapopcan/vim-twiggy'</span></span><br><span class="line"><span class="string">Plug 'hotoo/pangu.vim'</span></span><br><span class="line"><span class="string">Plug 'vim-scripts/cscope.vim'</span></span><br><span class="line"><span class="string">Plug 'Valloric/YouCompleteMe'</span></span><br><span class="line"><span class="string">Plug 'mileszs/ack.vim'</span></span><br><span class="line"><span class="string">Plug 'ctrlpvim/ctrlp.vim'</span></span><br><span class="line"><span class="string">Plug 'vim-airline/vim-airline'</span></span><br><span class="line"><span class="string">Plug 'mbbill/undotree'</span></span><br><span class="line"><span class="string">"</span> Plug <span class="string">'pangloss/vim-javascript'</span></span><br><span class="line">Plug <span class="string">'mxw/vim-jsx'</span></span><br><span class="line">Plug <span class="string">'leafgarland/typescript-vim'</span></span><br><span class="line"><span class="string">" Plug 'peitalin/vim-jsx-typescript'</span></span><br><span class="line"><span class="string">Plug 'leafgarland/typescript-vim'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">call plug#end()</span></span><br><span class="line"><span class="string">"</span> Install Plugins End</span><br><span class="line"></span><br><span class="line"><span class="string">" setting: nerdtree</span></span><br><span class="line"><span class="string">nmap &lt;F3&gt; :NERDTreeToggle&lt;CR&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"</span> setting: tagbar</span><br><span class="line">nmap &lt;F4&gt; :TagbarToggle&lt;CR&gt;</span><br><span class="line"></span><br><span class="line"><span class="string">" setting: vim-markdown</span></span><br><span class="line"><span class="string">let g:vim_markdown_folding_disabled = 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"</span> setting: vim-gitgutter</span><br><span class="line"><span class="built_in">set</span> updatetime=250</span><br><span class="line"></span><br><span class="line"><span class="string">" setting vim-pangu</span></span><br><span class="line"><span class="string">autocmd BufWritePre *.markdown,*.md call PanGuSpacing()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"</span> ctags</span><br><span class="line">map &lt;F5&gt; :!ctags -R&lt;CR&gt;</span><br><span class="line"><span class="built_in">let</span> g:Tlist_Ctags_Cmd=<span class="string">'/usr/local/Cellar/ctags/5.8_1/bin/ctags'</span></span><br><span class="line"></span><br><span class="line"><span class="string">" YoucompleteMe</span></span><br><span class="line"><span class="string">let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'</span></span><br><span class="line"><span class="string">let g:ycm_show_diagnostics_ui = 0 "</span> <span class="built_in">disable</span> error checking, 1 <span class="keyword">for</span> <span class="built_in">enable</span></span><br><span class="line"></span><br><span class="line"><span class="string">" undotree</span></span><br><span class="line"><span class="string">if has("</span>persistent_undo<span class="string">")</span></span><br><span class="line"><span class="string">    set undodir=~/.vim/undo/</span></span><br><span class="line"><span class="string">    set undofile</span></span><br><span class="line"><span class="string">endif</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"</span> typescript</span><br><span class="line"><span class="string">" autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx</span></span><br></pre></td></tr></table></figure>
 
     
 
@@ -417,7 +413,7 @@
 <script>
     queue.offer(function() {
             var disqus_config = function () {
-                this.page.url = 'https://W-quan.github.io/2018/03/14/android-wifi-adb/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.url = 'https://W-quan.github.io/2019/01/10/My-vim-config/index.html';  // Replace PAGE_URL with your page's canonical URL variable
                 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
 
@@ -448,21 +444,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/01/10/My-vim-config/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/08/23/Generate-cscope-for-AOSP/" id="post_nav-older" class="next-content">
+        <a href="/2018/03/14/android-wifi-adb/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
